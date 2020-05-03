@@ -2,8 +2,10 @@
 <html lang="en-us">
   <head>
     <title>colbyausen.com</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
     <link rel="icon" href="images/evergreen.png" type="image/x-icon">
     <link rel="stylesheet" href="https://use.typekit.net/bdx2dbd.css">
+
   </head>
   <style>
     html, body {
@@ -34,9 +36,10 @@
     .main {
       display: flex;
       height: 100vh;
+      min-width: 350px;
     }
 
-    .left-bar {
+    .meta-bar {
       background-color: #dbd7d2;
       flex: 20%;
       display: flex;
@@ -47,7 +50,7 @@
       padding-right: 2%;
     }
 
-    .right-bar {
+    .banner-bar {
       background-color: #e33523;
       flex: 80%;
     } 
@@ -93,15 +96,39 @@
 
     .contact {
       font-weight: 300;
+      font-size: 120%;
       display: absolute;
       text-align: right;
       margin-bottom: 40%;
       letter-spacing: 3px;
     }
+
+    @media screen and (max-width: 600px) {
+      .main {
+        flex-direction: column;
+      }
+
+      .meta-bar {
+        order: 1;
+      }
+
+      .preamble {
+        margin-top: 5%;
+      }
+
+      .right-content {
+        margin-top: 10%;
+      }
+
+      .headline {
+        font-size: 500%;
+        margin-bottom: 10%;
+      }
+    }
   </style>
   <body>
     <div class="main">
-      <div class="left-bar">
+      <div class="meta-bar">
         <div class="preamble">
           web development, VIM, software quality, The Clash, testing, CI, Adobe, typography, Rainier, WWII buff, NES 
         </div>
@@ -112,7 +139,7 @@
           <li><a target="_blank" href="https://www.instagram.com/clabretro/">@CLABRETRO</a></li>
         </ul>
       </div>
-      <div class="right-bar">
+      <div class="banner-bar">
         <div class="right-content">
           <div class="me">
             COLBY AUSEN 
